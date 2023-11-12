@@ -24,7 +24,7 @@ function build_test_logs() {
     for file in test/*.ll; do
         echo "Processing file: $file"
         result=$(basename "${file%???}")
-        opt -enable-new-pm=0 -load build/dp-pass/libDebloatPass.so --dp-pass -disable-output "$file" > "$result-dp-pass.bc" 2> "$result-pass.log"
+        opt -enable-new-pm=0 -load build/dp-pass/libDebloatPass.so --dp-pass -o "$result-dp-pass.bc" "$file"  2> "$result-pass.log"
         mv "$result-pass.log" logs
         mv "$result-dp-pass.bc" test
         echo
@@ -38,7 +38,7 @@ function build_test() {
         echo "Processing file: $file"
         result=$(basename "${file%???}")
         echo "Processing file: $result"
-        opt -enable-new-pm=0 -load ./build/dp-pass/libDebloatPass.so --dp-pass -disable-output -debug "$file" > test/"$result-dp-pass.bc"
+        opt -enable-new-pm=0 -load ./build/dp-pass/libDebloatPass.so --dp-pass "$file" > test/"$result-dp-pass.bc"
         echo
     done
 }
