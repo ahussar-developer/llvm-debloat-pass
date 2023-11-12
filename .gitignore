@@ -1,2 +1,4 @@
 build/
 dp-pass/tmp-new-pm.cpp
+logs/
+test/
