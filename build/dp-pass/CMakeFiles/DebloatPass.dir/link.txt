@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -shared  -o libDebloatPass.so CMakeFiles/DebloatPass.dir/DebloatPass.cpp.o   -L/home/user/project/llvm-project/llvm_build/./lib 

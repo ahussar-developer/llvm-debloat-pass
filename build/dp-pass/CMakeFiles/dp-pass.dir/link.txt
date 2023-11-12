@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -Wall  -fdiagnostics-color=always -fno-rtti -fno-rtti -g -shared  -o ../lib/libdp-pass.so CMakeFiles/dp-pass.dir/DebloatPass.cpp.o   -L/home/user/project/llvm-project/llvm_build/./lib 
